@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Test Method in Xunit with Fact tag</Title>
+      <Author>Carlos Angulo Mascarell</Author>
+      <Description>Insert a public void method with the Fact tag. It also insert the words Arrange, Act and Assert in separate lines as comments</Description>
+      <Shortcut>testmXunit_Fact</Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[
+        [Fact]
+        public void $MethodToBeTested$_$Scenario$_$Result$(){
+          // Arrange
+          $InitialArrangeCode$
+            // Act
+            // Assert
+        }
+        ]]>
+      </Code>
+      <Declarations>
+        <Literal>
+          <ID>MethodToBeTested</ID>
+          <ToolTip>Name of the method to be tested</ToolTip>
+          <Default>MethodToBeTested</Default>
+        </Literal>
+        <Literal>
+          <ID>Scenario</ID>
+          <ToolTip>Scenario to be tested in the method </ToolTip>
+          <Default>Scenario</Default>
+        </Literal>
+        <Literal>
+          <ID>Result</ID>
+          <ToolTip>Result of the scenario tested</ToolTip>
+          <Default>Result</Default>
+        </Literal>
+        <Literal>
+          <ID>InitialArrangeCode</ID>
+          <ToolTip>InitialArrangeCode</ToolTip>
+          <Default>InitialArrangeCode</Default>
+        </Literal>
+      </Declarations>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
