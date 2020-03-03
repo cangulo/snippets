@@ -6,7 +6,7 @@
     // 1. Open Preferences > Configure User Snippets 
     // 2. Select if you want to create a global snippet file or you want to create a snippet file for the project you have open
     // 3. In the file create, paste the next json entities in the example commented 
-    // 4. Open a markdown file and type the initial charracters of the preffix you want to use, 
+    // 4. Open a markdown file and type the initial characters of the prefix you want to use, 
     //      if the snippet doesn't appears, press Ctrl + Space and select it
 	"Header and parragraph ": {
 		"prefix": "headers_and_par",
