@@ -1,0 +1,41 @@
+{
+    // This JSON should be pasted into:
+    // * the global snippet file of the user  
+    // * the specific snippets file of the project opened in VS Code
+    // Steps to do it:
+    // 1. Open Preferences > Configure User Snippets 
+    // 2. Select if you want to create a global snippet file or you want to create a snippet file for the project you have open
+    // 3. In the file create, paste the next json entities in the example commented 
+    // 4. Open a markdown file and type the initial characters of the prefix you want to use, 
+    //      if the snippet doesn't appears, press Ctrl + Space and select it
+	"Fill Bash File": {
+		"prefix": "fill_bash",
+		"body": [
+			"#!/bin/bash",
+			"#   ${1:FileTitle}",
+			"#   ${2:FileDescription}",
+			"",
+			"${3:echo \"hola\"}",
+			"",
+			"var=1",
+			"",
+			"# var=$(commands)",
+			"",
+			"array=(\"test1\" \"test2\" \"test3\")",
+			"",
+			"for i in ${array[@]}; do",
+			"    echo \\$i",
+			"done",
+			"",
+			"echo -e \"\\n###    ArrayLength\"${#array[@]}",
+			"",
+			"if [[ ${#array[@]} -eq 3 ]];then",
+			"    echo -e \"\\n###      if-true\"",
+			"else",
+			"    echo -e \"\\n###      if-false\"",
+			"fi",
+		],
+		"description": "Insert a template of a bash file with a set of predefined variables to be used",
+		"scope": "shellscript"
+	}
+}
