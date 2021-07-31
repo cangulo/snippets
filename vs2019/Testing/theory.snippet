@@ -5,21 +5,38 @@
       <Title>Test Method in Xunit with Fact tag</Title>
       <Author>Carlos Angulo Mascarell</Author>
       <Description>Insert a public void method with the Fact tag. It also insert the words Arrange, Act and Assert in separate lines as comments</Description>
-      <Shortcut>testmXunit_Fact</Shortcut>
+      <Shortcut>theory_testm</Shortcut>
     </Header>
     <Snippet>
       <Code Language="CSharp">
         <![CDATA[
-        [Fact]
-        public void $MethodToBeTested$_$Scenario$_$Result$(){
+        [Theory]
+        [InlineData($FirstValueInlineData$)]
+        public void $MethodToBeTested$_$Scenario$_$Result$($FirstInputType$ $FirstInputVarName$ ){
           // Arrange
           $InitialArrangeCode$
-            // Act
-            // Assert
+          // Act
+          $FirstInputVarName$
+          // Assert
         }
         ]]>
       </Code>
       <Declarations>
+        <Literal>
+          <ID>FirstValueInlineData</ID>
+          <ToolTip>First value provided in the inline data attribute</ToolTip>
+          <Default>FirstValue</Default>
+        </Literal>
+        <Literal>
+          <ID>FirstInputType</ID>
+          <ToolTip>Type of the first value provided in the inline data attribute</ToolTip>
+          <Default>FirstInputType</Default>
+        </Literal>
+        <Literal>
+          <ID>FirstInputVarName</ID>
+          <ToolTip>Name of the first parameter</ToolTip>
+          <Default>FirstInputVarName</Default>
+        </Literal>
         <Literal>
           <ID>MethodToBeTested</ID>
           <ToolTip>Name of the method to be tested</ToolTip>
